@@ -1,8 +1,0 @@
-Nama Restoran : Hala Arabian Resto
-Tagline : Original Middle Eastern Recipe
-Location: https://g.page/hala-resto?share
-Alamat: Jl. Profesor DR. HR Boenyamin, Sumampir Wetan, Pabuaran, Kec. Purwokerto Utara, Kabupaten Banyumas, Jawa Tengah 53124
-Reservation: https://api.whatsapp.com/send?phone=6281997536829&text=Hai%20kak%2C%20saya%20ingin%20%2AReservasi%2A%20%2ATempat%2A%20di%20%2AHala%2A%20%2AResto%2A%2C%20apakah%20bisa%20dibantu%20memberikan%20informasi%3F
-Event: https://api.whatsapp.com/send?phone=6281997536829&text=Hai%20kak%2C%20saya%20ingin%20melaksanakan%20%2AEvent%2A%20di%20%2AHala%2A%20%2AResto%2A%2C%20apakah%20bisa%20dibantu%20memberikan%20informasi%3F
-Instagram: https://www.instagram.com/hala.restocafe/?hl=id
-Facebook: https://www.facebook.com/people/halarestocafe/100063573932919/
