@@ -17,14 +17,19 @@
       href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     >
-    <!-- TailwindCSS JIT CDN -->
-    <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
-    <script type="tailwind-config">
-      {
-        theme: {
-          extend: {
+    <!-- Poppins Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    >
+    <!-- TailwindCSS JIT CDN
+      <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+      <script type="tailwind-config">
+        {
+          theme: {
+            extend: {
             fontFamily: {
-              'body': ['Open Sans', 'Nunito', 'system-ui', 'sans-serif']
+              'body': ['Poppins', 'Open Sans', 'Nunito', 'system-ui', 'sans-serif']
             },
             colors: {
               'accent-brown': '#6C463B',
@@ -35,37 +40,34 @@
         }
       }
     </script>
+    <script type="postcss">
+      .scroll-smooth {
+        scroll-behavior: smooth !important;
+      }
+    </script> -->
     <!-- AlpineJS -->
     <script src="//unpkg.com/alpinejs" defer></script>
+    <!-- Vanilla CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/index.css">
     <!-- Title -->
     <title>Hala Arabian Resto</title>
   </head>
 
-  <body 
-    x-data="{ isMobileNavbarOpen: false }" 
-    class="font-body bg-white relative"
-  >
-    <header class="w-full" >
-      <div x-data="{ show: false, }" class="w-full h-full">
-        <button @click="show = true" class="">
-          v
-        </button>
-        <nav 
-          x-show="show" 
-          x-transition.opacity.duration.280ms
-          class="w-screen h-screen bg-white absolute top-0 left-0"
-        >
-          <button @click="show = false">
-            x
-          </button>
-        </nav>
-      </div>
+  <body class="home-body">
+    <header class="header-wrapper">
+      
     </header>
-    <main class="">
-      <section class="">
-      </section>
-      <section class=""></section>
-      <section class=""></section>
+    <main class="home-sections-wrapper">
+      <section id="first_section" class="home-sections">1</section>
+      <section id="second_section" class="home-sections">2</section>
+      <section id="third_section" class="home-sections">3</section>
+      <button class="scroll-top-button button-invisible" title="scroll-top-button">
+        <span>Back to top</span>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+          <path fill="none" d="M0 0h24v24H0z" />
+          <path d="M13 7.828V20h-2V7.828l-5.364 5.364-1.414-1.414L12 4l7.778 7.778-1.414 1.414L13 7.828z" />
+        </svg>
+      </button>
     </main>
     <footer>
 
