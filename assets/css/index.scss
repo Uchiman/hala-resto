@@ -59,18 +59,19 @@ a {
   bottom: 1rem;
   right: 1rem;
   padding: 0.5rem 0.5rem;
-  width: 7.5rem;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
   box-shadow: rgba(25, 25, 39, 0.2) 0px 7px 29px 0px;
   font-size: .75rem;
-  border-radius: 0.375rem;
+  border-radius: 9999px;
   background-color: #FFF;
   transition: ease-in-out 280ms;
+  cursor: pointer;
 
   span {
     font-weight: 500;
+    display: none;
   }
 
   svg {
@@ -115,3 +116,18 @@ a {
 
 
 /* Menu Page Styles */
+
+
+
+/* End of Mobile and Global Styles */
+/* Responsives */
+
+@media screen and (min-width: $lg) {
+  .scroll-top-button {
+    width: 7.5rem;
+
+    span {
+      display: block;
+    }
+  }
+}

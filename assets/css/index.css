@@ -44,7 +44,6 @@ a {
   bottom: 1rem;
   right: 1rem;
   padding: 0.5rem 0.5rem;
-  width: 7.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -57,14 +56,16 @@ a {
   -webkit-box-shadow: rgba(25, 25, 39, 0.2) 0px 7px 29px 0px;
           box-shadow: rgba(25, 25, 39, 0.2) 0px 7px 29px 0px;
   font-size: .75rem;
-  border-radius: 0.375rem;
+  border-radius: 9999px;
   background-color: #FFF;
   -webkit-transition: ease-in-out 280ms;
   transition: ease-in-out 280ms;
+  cursor: pointer;
 }
 
 .scroll-top-button span {
   font-weight: 500;
+  display: none;
 }
 
 .scroll-top-button svg {
@@ -104,4 +105,14 @@ a {
 }
 
 /* Menu Page Styles */
+/* End of Mobile and Global Styles */
+/* Responsives */
+@media screen and (min-width: 1024px) {
+  .scroll-top-button {
+    width: 7.5rem;
+  }
+  .scroll-top-button span {
+    display: block;
+  }
+}
 /*# sourceMappingURL=index.css.map */

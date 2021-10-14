@@ -6,8 +6,9 @@ const body = document.body;
 const header = body.querySelector('header');
 const sections = body.querySelectorAll('main.home-sections-wrapper section');
 const scrollTopButton = body.querySelector('button[title=\'scroll-top-button\']');
-const limitBeforeScrollTopButtonAppear = sections[0].getBoundingClientRect().height;
+const limitBeforeScrollTopButtonAppear = sections[0].getBoundingClientRect().height / 2;
 
+// scroll to top function
 if (scrollTopButton != null) {
   scrollTopButton.onclick = function () {
     header.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })
