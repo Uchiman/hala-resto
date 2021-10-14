@@ -6,22 +6,29 @@ const body = document.body;
 const header = body.querySelector('header');
 const sections = body.querySelectorAll('main.home-sections-wrapper section');
 const scrollTopButton = body.querySelector('button[title=\'scroll-top-button\']');
-const limitBeforeScrollTopButtonAppear = sections[0].getBoundingClientRect().height / 2;
 
 // scroll to top function
 if (scrollTopButton != null) {
-  scrollTopButton.onclick = function () {
-    header.scrollIntoView({ behavior: 'smooth', block: 'end', inline: 'nearest' })
+  scrollTopButton.onclick = () => {
+    header.scrollIntoView({ behavior: 'smooth', block: 'start', inline: 'nearest' })
   }
 }
 
-// scroll listener
-function scrollListener() {
-  if (window.scrollY >= limitBeforeScrollTopButtonAppear) {
-    return scrollTopButton.classList.replace('button-invisible', 'button-visible');
-  }
+// appearing scroll top button using IntersectionObserver
+const scrollTopAppear = target => {
+  const io = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      console.log(entry);
 
-  return scrollTopButton.classList.replace('button-visible', 'button-invisible');
+      if (!entry.isIntersecting) {
+        return scrollTopButton.classList.replace('button-invisible', 'button-visible');
+      }
+
+      return scrollTopButton.classList.replace('button-visible', 'button-invisible')
+    })
+  });
+
+  io.observe(target);
 }
 
-window.addEventListener('scroll', scrollListener);
+scrollTopAppear(header);
