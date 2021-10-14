@@ -2,6 +2,8 @@
 const body = document.body;
 const header = body.querySelector('header');
 const sections = body.querySelectorAll('main section');
+
+// scroll top button
 const scrollTopButton = body.querySelector('button[title=\'scroll-top-button\']');
 
 // scroll to top function

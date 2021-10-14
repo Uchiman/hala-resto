@@ -17,6 +17,7 @@ $body: 'Poppins', 'Nunito', 'Open Sans', system-ui, sans-serif;
 
 // Colors
 $background-primary: #FFF;
+$foreground-primary: #1F2937;
 $accent-brown: #6C463B;
 $accent-yellow-one: #FAAB09;
 $accent-yellow-two: #CC8D2A;
@@ -26,6 +27,7 @@ $accent-yellow-two: #CC8D2A;
   margin: 0;
   box-sizing: border-box;
   font-family: $body;
+  color: $foreground-primary;
 }
 
 html {
@@ -58,15 +60,14 @@ a {
   align-items: center;
   justify-content: flex-end;
   padding: 0 1.25rem;
-  background-color: $accent-brown;
 
   a {
-    color: $background-primary;
+    color: $foreground-primary;
   }
 }
 
 .main {
-  width: 100%;
+  max-width: 100vh;
   height: 100%;
   position: relative;
 }
@@ -106,6 +107,24 @@ a {
   opacity: 1;
 }
 
+footer {
+  width: 100%;
+  height: 100%;
+  background-color: $accent-brown;
+  color: $background-primary;
+}
+
+.footer-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-content-bottom {
+  width: 100%;
+}
+
 /* Home Page Styles */
 
 /* Main Section */
@@ -117,24 +136,39 @@ a {
 }
 
 #first_section {
-  
-  // height: calc(100vh - 3rem);
+  display: flex;
+  height: 100%;
   background-color: #FFF;
+  padding: 2.5rem 1.25rem;
 
-  span {
+  img, span {
+      max-width: 100%;
+      opacity: 0;
+      transform: translateX(50%);
+      transition: all 750ms ease-in-out;
+  }
+
+  .visible {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 750ms ease-in-out;
+  }
+
+  #logo-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #logo-title {
+    font-size: 2rem;
     text-align: center;
   }
 }
 
 #second_section {
   background-color: #6C463B;
-}
-
-/* Footer Section */
-.home-footer-wrapper {
-  width: 100%;
-  height: 50vh;
-  background-color: $accent-brown;
 }
 
 /* Menu Page Styles */
@@ -153,7 +187,7 @@ a {
 
 /* Responsives */
 
-@media screen and (min-width: $lg) {
+@media screen and (min-width: $xl) {
   .scroll-top-button {
     justify-content: center;
     width: 7rem;
