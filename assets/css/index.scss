@@ -13,7 +13,8 @@ $xl: 1280px;
 $xl-2: 1536px;
 
 // Fonts
-$body: 'Poppins', 'Nunito', 'Open Sans', system-ui, sans-serif;
+$default: ui-sans-serif, system-ui, -apple-system, 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$title: 'Poppins', 'Nunito', 'Open Sans', ui-sans-serif, system-ui, sans-serif;
 
 // Colors
 $background-primary: #FFF;
@@ -22,11 +23,18 @@ $accent-brown: #6C463B;
 $accent-yellow-one: #FAAB09;
 $accent-yellow-two: #CC8D2A;
 
+// Letter Spacing
+$tighter: -0.05rem;
+$tight: -0.025rem;
+$wide: 0.025rem;
+$wider: 0.05rem;
+$widest: 0.1rem;
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: $body;
+  font-family: $default;
   color: $foreground-primary;
 }
 
@@ -53,20 +61,104 @@ a {
   text-decoration: none;
 }
 
+ul, li {
+  list-style-type: none;
+}
+
+body {
+  position: relative;
+  max-width: 100vw;
+  height: 100%;
+}
+
+#nav-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  z-index: 99;
+  background-color: $accent-brown;
+
+  #navigations-page-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+    #close-button-wrapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 2rem 1.5rem 2rem 1.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: end;
+    
+      button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+    
+    #navigations {
+      width: 100%;
+      height: 100%;
+
+      ul {
+        width: 100%;
+        height: 100%;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        li {
+          width: 100%;
+
+          a { 
+            color: $background-primary;
+            width: 100%;
+            padding: 1rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: $title;
+            font-weight: 300;
+            text-align: center;
+          }
+        }
+
+      }
+    }
+  }
+
+}
+
 .header-wrapper {
   width: 100%;
-  height: 5rem;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 0 1.25rem;
+  padding: 2rem 1.5rem 2rem 1.5rem;
 
-  a {
-    color: $foreground-primary;
+  nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }
 
-.main {
+main {
   max-width: 100vh;
   height: 100%;
   position: relative;
@@ -79,6 +171,7 @@ a {
   justify-content: center;
   box-shadow: rgba(25, 25, 39, 0.2) 0px 7px 29px 0px;
   font-size: .75rem;
+  line-height: 1.25rem;
   border-radius: 9999px;
   background-color: #FFF;
   transition: ease-in-out 280ms;
@@ -139,19 +232,10 @@ footer {
   display: flex;
   height: 100%;
   background-color: #FFF;
-  padding: 2.5rem 1.25rem;
+  padding: 0 2rem 6rem 2rem;
 
-  img, span {
-      max-width: 100%;
-      opacity: 0;
-      transform: translateX(50%);
-      transition: all 750ms ease-in-out;
-  }
-
-  .visible {
-    opacity: 1;
-    transform: translateX(0);
-    transition: all 750ms ease-in-out;
+  img {
+    max-width: 100%;
   }
 
   #logo-wrapper {
@@ -162,7 +246,9 @@ footer {
   }
 
   #logo-title {
-    font-size: 2rem;
+    font-family: $title;
+    font-size: 1.5rem;
+    line-height: 2rem;
     text-align: center;
   }
 }

@@ -50,9 +50,28 @@
     <title>Our Menus | Hala Arabian Resto</title>
   </head>
 
-  <body>
+  <body x-ref="body-ref" x-data="{ 
+    showNav: false,
+    setShowNav() {
+      this.showNav = !this.showNav;
+      
+      if (this.showNav) {
+        $refs['body-ref'].style.overflow = 'hidden';
+      } else {
+        $refs['body-ref'].removeAttribute('style');
+      }
+    }
+  }">
     <header class="header-wrapper">
-      <a href="/">Home</a>
+      <nav>
+        <button @click="setShowNav()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+          </svg>
+        </button>
+      </nav>
     </header>
     <main class="menu-sections-wrapper">
       <span>These are some of Our menus.</span>
@@ -109,6 +128,27 @@
         </div>
       </div>
     </footer>
+    <div x-show="showNav" id="nav-page" x-transition.opacity.duration.380ms>
+      <div id="navigations-page-wrapper">
+        <div id="close-button-wrapper">
+          <button @click="setShowNav()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg"
+              viewBox="0 0 16 16">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" fill="#FFF" />
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" fill="#FFF" />
+            </svg>
+          </button>
+        </div>
+        <div id="navigations">
+          <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/menu.html">Menu</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
     <!-- Scripts -->
     <script defer src="assets/scripts/menu.js"></script>
     <script defer src="assets/scripts/global.js"></script>
