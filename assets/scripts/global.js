@@ -2,7 +2,7 @@
 const body = document.body;
 const header = body.querySelector('header');
 const sections = body.querySelectorAll('main section');
-const anchors = body.querySelectorAll('a');
+const anchors = body.querySelectorAll('a[data-link=\'navigation\']');
 
 // dev mode
 anchors.forEach(anchor => {

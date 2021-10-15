@@ -258,13 +258,67 @@ footer span {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 3.75rem 1.5rem 5rem 1.5rem;
+  padding: 2.5rem 1.5rem 2.5rem 1.5rem;
+}
+
+.footer-content-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .footer-content-bottom span {
   display: block;
   color: #FFF;
   padding: .5rem 0;
+  letter-spacing: 0.05rem;
+}
+
+.footer-content-bottom > div {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.footer-content-bottom #quick-links #links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-content-bottom #quick-links #links a {
+  color: #FFF;
+  margin-top: .125rem;
+  margin-bottom: .125rem;
+}
+
+.footer-content-bottom #socials-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .footer-content-bottom .socials {
@@ -278,15 +332,21 @@ footer span {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: .5rem 0;
 }
 
-.footer-content-bottom svg {
-  height: 1.25rem;
-  width: 1.25rem;
+.footer-content-bottom .socials a {
+  letter-spacing: 0.05rem;
+  margin-right: .5rem;
+  margin-left: .5rem;
+}
+
+.footer-content-bottom .socials svg {
+  height: 1.5rem;
+  width: 1.5rem;
   fill: #FFF;
 }
 
