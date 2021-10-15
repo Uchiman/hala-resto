@@ -74,6 +74,7 @@ body {
 
 #nav-page {
   position: absolute;
+  visibility: hidden;
   top: 0;
   left: 0;
   height: 100vh;
@@ -240,11 +241,30 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  
+  #address {
+    svg {
+      height: .875rem;
+      width: .875rem;
+      fill: $background-primary;
+    }
+
+    span {
+      font-size: .75rem;
+      font-weight: 300;
+      text-align: center;
+    }
+
+    &>div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
 
   span {
     display: block;
     color: $background-primary;
-    padding: .5rem 0;
     letter-spacing: $wider;
   }
 
@@ -263,8 +283,9 @@ footer {
 
       a {
         color: $background-primary;
-        margin-top: .125rem;
-        margin-bottom: .125rem;
+        font-family: $title;
+        margin-top: .25rem;
+        margin-bottom: .25rem;
       }
     }
   }

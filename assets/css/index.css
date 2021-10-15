@@ -45,6 +45,7 @@ body {
 
 #nav-page {
   position: absolute;
+  visibility: hidden;
   top: 0;
   left: 0;
   height: 100vh;
@@ -277,10 +278,34 @@ footer span {
           justify-content: center;
 }
 
+.footer-content-bottom #address svg {
+  height: .875rem;
+  width: .875rem;
+  fill: #FFF;
+}
+
+.footer-content-bottom #address span {
+  font-size: .75rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+.footer-content-bottom #address > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .footer-content-bottom span {
   display: block;
   color: #FFF;
-  padding: .5rem 0;
   letter-spacing: 0.05rem;
 }
 
@@ -307,8 +332,9 @@ footer span {
 
 .footer-content-bottom #quick-links #links a {
   color: #FFF;
-  margin-top: .125rem;
-  margin-bottom: .125rem;
+  font-family: "Poppins", "Nunito", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  margin-top: .25rem;
+  margin-bottom: .25rem;
 }
 
 .footer-content-bottom #socials-wrapper {
