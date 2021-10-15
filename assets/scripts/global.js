@@ -4,6 +4,7 @@ const header = body.querySelector('header');
 const sections = body.querySelectorAll('main section');
 const anchors = body.querySelectorAll('a');
 
+// dev mode
 anchors.forEach(anchor => {
   const href = anchor.getAttribute('href');
   const currentPath = document.location.pathname;

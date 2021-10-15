@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Open Sans Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <!-- Nunito Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- Poppins Font -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- TailwindCSS JIT CDN
+      <script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+      <script type="tailwind-config">
+        {
+          theme: {
+            extend: {
+            fontFamily: {
+              'body': ['Poppins', 'Open Sans', 'Nunito', 'system-ui', 'sans-serif']
+            },
+            colors: {
+              'accent-brown': '#6C463B',
+              'accent-yellow-1': '#FAAB09',
+              'accent-yellow-2': '#CC8D2A'
+            }
+          }
+        }
+      }
+    </script>
+    <script type="postcss">
+      .scroll-smooth {
+        scroll-behavior: smooth !important;
+      }
+    </script> -->
+  <!-- AlpineJS -->
+  <script src="//unpkg.com/alpinejs" defer></script>
+  <!-- Vanilla CSS -->
+  <link rel="stylesheet" type="text/css" href="assets/css/index.css">
+  <!-- Title -->
+  <title>Hala Arabian Resto</title>
+</head>
+
+<body x-ref="body-ref" x-data="{ 
+    showNav: false,
+    setShowNav() {
+      this.showNav = !this.showNav;
+      
+      if (this.showNav) {
+        $refs['body-ref'].style.overflow = 'hidden';
+      } else {
+        $refs['body-ref'].removeAttribute('style');
+      }
+    }
+  }">
+  <header class="header-wrapper">
+    <nav>
+      <button @click="setShowNav()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-list"
+          viewBox="0 0 16 16">
+          <path fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z" />
+        </svg>
+      </button>
+    </nav>
+  </header>
+  <main class="home-section-wrapper">
+  </main>
+  <footer>
+
+  </footer>
+  <button class="scroll-top-button button-invisible" title="scroll-top-button">
+    <span>Back to top</span>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+      <path fill="none" d="M0 0h24v24H0z" />
+      <path d="M13 7.828V20h-2V7.828l-5.364 5.364-1.414-1.414L12 4l7.778 7.778-1.414 1.414L13 7.828z" />
+    </svg>
+  </button>
+  <div x-show="showNav" id="nav-page" x-transition.opacity.duration.380ms>
+    <div id="navigations-page-wrapper">
+      <div id="close-button-wrapper">
+        <button @click="setShowNav()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-x-lg"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z" fill="none" />
+            <path fill-rule="evenodd" clip-rule="evenodd"
+              d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z" fill="none" />
+          </svg>
+        </button>
+      </div>
+      <div id="navigations">
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/menu.html">Menu</a></li>
+          <li><a href="/reservation.html">Reservation</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- Scripts -->
+  <script defer src="assets/scripts/global.js"></script>
+</body>
+
+</html>

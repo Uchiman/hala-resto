@@ -78,7 +78,7 @@ body {
   height: 100vh;
   width: 100vw;
   z-index: 99;
-  background-color: $accent-brown;
+  background-color: $background-primary;
 
   #navigations-page-wrapper {
     position: relative;
@@ -101,6 +101,12 @@ body {
         display: flex;
         align-items: center;
         justify-content: center;
+
+        svg {
+          path {
+            fill: $accent-brown;
+          }
+        }
       }
     }
     
@@ -122,9 +128,9 @@ body {
           width: 100%;
 
           a { 
-            color: $background-primary;
+            color: $accent-brown;
             width: 100%;
-            padding: 1rem 0;
+            padding: 0.5rem 0;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -156,6 +162,12 @@ body {
     align-items: center;
     justify-content: center;
   }
+
+  svg {
+    path {
+      fill: $accent-brown;
+    }
+  }
 }
 
 main {
@@ -173,12 +185,16 @@ main {
   font-size: .75rem;
   line-height: 1.25rem;
   border-radius: 9999px;
-  background-color: #FFF;
+  background-color: $background-primary;
   transition: ease-in-out 280ms;
   cursor: pointer;
   bottom: 1.5rem;
   right: 1.25rem;
   padding: .75rem .75rem;
+
+  svg {
+    fill: $accent-brown;
+  }
 
   span {
     display: none;
@@ -275,22 +291,13 @@ footer {
 
 @media screen and (min-width: $xl) {
   .scroll-top-button {
-    justify-content: center;
-    width: 7rem;
-    padding: 0.5rem 0;
-    bottom: 1rem;
-    right: 1rem;
-    border-radius: 0.375rem;
-
-    span {
-      display: block;
-      margin-right: 0.375rem;
-      font-weight: 600;
-    }
+    padding: 1rem 1rem;
+    bottom: 2rem;
+    right: 1.5rem;
 
     svg {
-      height: 1rem;
-      width: 1rem;
+      height: 1.5rem;
+      width: 1.5rem;
     }
   }
 }
