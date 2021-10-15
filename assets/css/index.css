@@ -5,7 +5,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: ui-sans-serif, system-ui, -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  color: #1F2937;
+  color: #374151;
 }
 
 html {
@@ -72,7 +72,7 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  padding: 2rem 1.5rem 2rem 1.5rem;
+  padding: 1.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -149,7 +149,7 @@ body {
 
 .header-wrapper {
   width: 100%;
-  padding: 2rem 1.5rem;
+  padding: 1.5rem;
 }
 
 .header-wrapper nav {
@@ -297,6 +297,16 @@ footer span {
           align-items: center;
 }
 
+.footer-content-bottom #address a {
+  color: #FFF;
+}
+
+.footer-content-bottom #address a svg {
+  margin-left: .25rem;
+  height: .75rem;
+  width: .75rem;
+}
+
 .footer-content-bottom #address #address-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -312,7 +322,7 @@ footer span {
   margin-bottom: 0.5rem;
 }
 
-.footer-content-bottom #address #address-wrapper > div {
+.footer-content-bottom #address #address-wrapper div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -320,14 +330,14 @@ footer span {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer-content-bottom #address svg {
-  height: .875rem;
-  width: .875rem;
+  height: .75rem;
+  width: .75rem;
   fill: #FFF;
 }
 
@@ -465,6 +475,7 @@ footer span {
 
 #first_section #logo-title {
   font-family: "Poppins", "Nunito", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  color: #374151;
   font-size: 1.75rem;
   line-height: 2.25rem;
   text-align: center;
