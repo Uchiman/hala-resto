@@ -39,6 +39,8 @@ body {
   position: relative;
   max-width: 100vw;
   height: 100%;
+  -ms-scroll-snap-type: mandatory;
+      scroll-snap-type: mandatory;
 }
 
 #nav-page {
@@ -146,7 +148,7 @@ body {
 
 .header-wrapper {
   width: 100%;
-  padding: 2rem 1.5rem 2rem 1.5rem;
+  padding: 2rem 1.5rem;
 }
 
 .header-wrapper nav {
@@ -204,7 +206,7 @@ main {
   -webkit-transition: ease-in-out 280ms;
   transition: ease-in-out 280ms;
   cursor: pointer;
-  bottom: 1.5rem;
+  bottom: 1.25rem;
   right: 1.25rem;
   padding: .75rem .75rem;
 }
@@ -236,7 +238,10 @@ footer {
   width: 100%;
   height: 100%;
   background-color: #6C463B;
-  color: #FFF;
+}
+
+footer span {
+  font-family: "Poppins", "Nunito", "Open Sans", ui-sans-serif, system-ui, sans-serif;
 }
 
 .footer-wrapper {
@@ -253,10 +258,36 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 3.75rem 1.5rem 5rem 1.5rem;
 }
 
-.footer-content-bottom {
-  width: 100%;
+.footer-content-bottom span {
+  display: block;
+  color: #FFF;
+  padding: .5rem 0;
+}
+
+.footer-content-bottom .socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: .5rem 0;
+}
+
+.footer-content-bottom svg {
+  height: 1.25rem;
+  width: 1.25rem;
+  fill: #FFF;
 }
 
 /* Home Page Styles */
@@ -298,8 +329,8 @@ footer {
 
 #first_section #logo-title {
   font-family: "Poppins", "Nunito", "Open Sans", ui-sans-serif, system-ui, sans-serif;
-  font-size: 1.5rem;
-  line-height: 2rem;
+  font-size: 1.75rem;
+  line-height: 2.25rem;
   text-align: center;
 }
 

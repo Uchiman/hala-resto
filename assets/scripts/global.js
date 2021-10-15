@@ -8,7 +8,7 @@ const anchors = body.querySelectorAll('a');
 anchors.forEach(anchor => {
   const href = anchor.getAttribute('href');
   const currentPath = document.location.pathname;
-  if (currentPath == `/hala-resto${href}`) {
+  if (currentPath == href) {
     anchor.style.opacity = 1;
   } else {
     anchor.style.opacity = .5;
