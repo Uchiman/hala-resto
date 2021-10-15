@@ -278,19 +278,41 @@ footer span {
           justify-content: center;
 }
 
-.footer-content-bottom #address svg {
-  height: .875rem;
-  width: .875rem;
-  fill: #FFF;
+.footer-content-bottom h3 {
+  color: #FFF;
+  font-family: "Poppins", "Nunito", "Open Sans", ui-sans-serif, system-ui, sans-serif;
+  letter-spacing: 0.05rem;
 }
 
-.footer-content-bottom #address span {
-  font-size: .75rem;
-  font-weight: 300;
-  text-align: center;
+.footer-content-bottom #address {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.footer-content-bottom #address > div {
+.footer-content-bottom #address #address-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.footer-content-bottom #address #address-wrapper > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -303,6 +325,18 @@ footer span {
           justify-content: center;
 }
 
+.footer-content-bottom #address svg {
+  height: .875rem;
+  width: .875rem;
+  fill: #FFF;
+}
+
+.footer-content-bottom #address span {
+  font-size: .75rem;
+  font-weight: 300;
+  text-align: center;
+}
+
 .footer-content-bottom span {
   display: block;
   color: #FFF;
@@ -312,6 +346,11 @@ footer span {
 .footer-content-bottom > div {
   margin-top: .5rem;
   margin-bottom: .5rem;
+}
+
+.footer-content-bottom #quick-links {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .footer-content-bottom #quick-links #links {
@@ -333,8 +372,7 @@ footer span {
 .footer-content-bottom #quick-links #links a {
   color: #FFF;
   font-family: "Poppins", "Nunito", "Open Sans", ui-sans-serif, system-ui, sans-serif;
-  margin-top: .25rem;
-  margin-bottom: .25rem;
+  letter-spacing: 0.05rem;
 }
 
 .footer-content-bottom #socials-wrapper {

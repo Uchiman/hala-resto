@@ -242,7 +242,31 @@ footer {
   align-items: center;
   justify-content: center;
   
+  h3 {
+    color: $background-primary;
+    font-family: $title;
+    letter-spacing: $wider;
+  }
+
   #address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    #address-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem;
+      
+      &>div {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
     svg {
       height: .875rem;
       width: .875rem;
@@ -255,11 +279,6 @@ footer {
       text-align: center;
     }
 
-    &>div {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-    }
   }
 
   span {
@@ -274,6 +293,8 @@ footer {
   }
 
   #quick-links {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 
     #links {
       display: flex;
@@ -284,8 +305,7 @@ footer {
       a {
         color: $background-primary;
         font-family: $title;
-        margin-top: .25rem;
-        margin-bottom: .25rem;
+        letter-spacing: $wider;
       }
     }
   }
